@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Quizify</title>
+         <!-- Cool Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet"> 
+        <!-- Cool fa fa icon -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Our stylesheet -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <span class="logo">
+                <ion-icon name="pulse"></ion-icon>
+            </span>
+            <nav class="navigation">
+                <a href="# ">Home</a>
+                <a href="# ">About</a>
+                <a href="# ">Student</a>
+                <a href="# ">Contact</a>
+                <button class="btnLogin-popup">Login </button>
+            </nav>
+        </header>
+    
+        <!-- login -->
+        <div class="wrapper">
+            <span class="icon-close">
+                <ion-icon name="close-outline"></ion-icon>
+            </span>
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" id="email" required>
+                        <label>Email</label>
+                    </div>
+    
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon> </span>
+                        <input type="password" id="password" required>
+                        <label>Password</label>
+                    </div>
+    
+                    <div class="remember-forget">
+                        <label><input type="checkbox">Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    
+                    <button onclick="login()" type="submit" class="btn">Login</button>
+                    
+                    <div class ="login-with" >
+                        <label>Continue with </label>
+                        <button class="provider-btn" id="signInwithGoogle"  ><i class="fa fa-google"></i></ion-icon></button>
+                        <button class="provider-btn" id="signinwithyahoo"><i class="fa fa-yahoo"></i></ion-icon></button>
+                    </div>
+
+                    <div class="login-register">
+                        <p>Don't have an account? <a href="#" class="register-link"> Register </a>
+    
+                        </p>
+                    </div>
+                </form>
+            </div>
+    
+            <!-- Form For Registration -->
+            <div class="form-box register">
+                <h2>Registration</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" id="r_email" required>
+                        <label>Email</label>
+                    </div>
+    
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon> </span>
+                        <input type="password" id="r_password" required>
+                        <label>Password</label>
+                    </div>
+    
+                    <div class="remember-forget">
+                        <label><input type="checkbox">I agree to the terms & conditions</label>
+    
+                    </div>
+                    <button onclick="register()"  type="submit" class="btn">Register</button>
+                    <div class="login-register">
+                        <p>Already have an account? <a href="#" class="login-link"> Login </a>
+    
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+    
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        
+    
+    </body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <!-- Our script must be loaded after firebase references -->
+    <script type="module" src="./JavaScript/google"></script>
+    <script src="index.js"></script>
+
+</html>
